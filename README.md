@@ -23,7 +23,7 @@ Keep a project's rules, decisions and past mistakes tied to the real code they c
 
 | File | Size | SHA-256 |
 |---|---|---|
-| [`CodeDNA-Setup-0.1.0-win-x64.exe`](https://github.com/thisismohhey-dev/codedna-app/releases/latest/download/CodeDNA-Setup-0.1.0-win-x64.exe) | 123 MB | `c18eb5a6e436e3cc42d65e7258523accdd10d59aecb638e00ab908f4742ff190` |
+| [`CodeDNA-Setup-0.1.0-win-x64.exe`](https://github.com/thisismohhey-dev/codedna-app/releases/latest/download/CodeDNA-Setup-0.1.0-win-x64.exe) | 123 MB | `1f5df0839e98f6bcad754cd124935bd9057a15f134866cb32f9c4c7c8c2aa0cc` |
 | [`CodeDNA-0.1.0-win-x64.zip`](https://github.com/thisismohhey-dev/codedna-app/releases/latest/download/CodeDNA-0.1.0-win-x64.zip) (no install — unzip and run `CodeDNA.exe`) | 155 MB | `48f394b87b2475c3ace690dbf7eee0b2fa8d10a208daf08ea8befd107b537253` |
 
 Verify a download in PowerShell: `Get-FileHash .\CodeDNA-Setup-0.1.0-win-x64.exe -Algorithm SHA256`
@@ -31,6 +31,18 @@ Verify a download in PowerShell: `Get-FileHash .\CodeDNA-Setup-0.1.0-win-x64.exe
 **Requirements:** Windows 10/11, 64-bit. Tested on Windows 11. No other platform is built yet.
 
 **About the Windows warning.** These builds are **not code-signed**, so Windows SmartScreen may say "unknown publisher" (*More info → Run anyway*). Check the SHA-256 above if you want to be sure the file is the one published here.
+
+## The installer
+
+The installer wears the same dark look as the app: branded sidebar, the app's accent colour on the progress bar, a per-user install with no admin prompt and no questions to answer.
+
+| Welcome | Installing |
+|---|---|
+| ![Installer welcome](docs/installer/installer-1-welcome.png) | ![Installing](docs/installer/installer-2-installing.png) |
+| **Ready** | **Uninstall** |
+| ![Installer finish](docs/installer/installer-3-finish.png) | ![Uninstaller](docs/installer/uninstaller-1-welcome.png) |
+
+It installs to `%LOCALAPPDATA%ProgramsCodeDNA` and adds a Start-menu entry and a desktop shortcut. Uninstalling removes the application and leaves your knowledge database in `%APPDATA%CodeDNA` untouched. The standard Windows buttons keep the system look — Windows does not let installers recolour them.
 
 ## What it does
 
